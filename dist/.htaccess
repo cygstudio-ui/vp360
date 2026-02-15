@@ -1,12 +1,15 @@
 <IfModule mod_rewrite.c>
+  # Force Apache to serve index.html
+  DirectoryIndex index.html
+
   RewriteEngine On
-  
+  RewriteBase /vp360/
+
   # Security: Block access to .git and .env files
   RewriteRule ^\.git - [F,L]
   RewriteRule ^\.env - [F,L]
 
   # SPA Routing: Redirect all requests to index.html
-  RewriteBase /vp360/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
