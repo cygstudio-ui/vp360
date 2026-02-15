@@ -241,6 +241,8 @@ export default function App() {
         <Route path="/manager" element={
           user ? <ManagerDashboard user={user} onLogout={() => setUser(null)} /> : <Navigate to="/" replace />
         } />
+        {/* Catch all - Redirect to Home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );
