@@ -6,5 +6,6 @@ deployment:
     - /bin/cp -R dist/* $DEPLOYPATH
     - /bin/cp public/.htaccess $DEPLOYPATH
     - /bin/cp -R api $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH
     - /bin/date > $DEPLOYPATH/deploy_log.txt
     - /bin/echo "Deployed frontend and backend to $DEPLOYPATH" >> $DEPLOYPATH/deploy_log.txt
