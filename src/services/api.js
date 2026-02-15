@@ -7,7 +7,7 @@ const API_URL = 'http://localhost:8889/api'; // Ajustado al puerto de MAMP MySQL
 // Asumiremos que el usuario accede a través de la carpeta de MAMP.
 
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: '/vp360/api',
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
